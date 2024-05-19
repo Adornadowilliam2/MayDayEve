@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wilfe Blog</title>
+    <link rel="shortcut icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+      <section id="imglogo">
+        <img src="giflogo.gif" alt="Giflogo" width="300px" height="100px" />
+      </section>
+      <div id="content">
+        <nav>
+          <button onclick="toggleLatest()">Latest</button>
+          <button onclick="toggleFeatures()">Features</button>
+          <button onclick="toggleContact()">Contact Us</button>
+        </nav>
+        <p>
+          "May Day Eve's Notes" provide brief reviews and analysis of Nick Joaquin iconic story. Come and let's explore the world full of mysteries and fiction made by the author, Nick Joaquin
+        </p>
+      </div>
+      <div id="latest" style="display: none">
+        <h2>
+          <i
+            class="fa fa-arrow-left"
+            aria-hidden="true"
+            onclick="navigate('left')"
+          ></i>
+          Latest Review
+          <i
+            class="fa fa-arrow-right"
+            aria-hidden="true"
+            onclick="navigate('right')"
+          ></i>
+        </h2>
+        <div class="cont1">
+          <section id="grid">
+            <div>
+              <h3>Author by: Nick Joaquin <br> Genre : magic realism, romance, and historical fiction</h3>
+              <h4>Rating:</h4>
+              <nav>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </nav>
+            </div>
+            <img
+              src="movie1.jpg"
+              alt="Enola Holmes"
+              width="150px"
+              height="200px"
+            />
+          </section>
+
+          <p>
+            "May Day Eve" is a story written by Filipino National Artist Nick Joaquin. Written after World War II, it became one of Joaquin's “signature stories” that became a classic in Philippine literature in English. Together with Joaquin's other stories like The Mass of St. Sylvester, Doña Jeronima and Candido’s Apocalypse, May Day Eve utilized the theme of "magic realism" long before the genre was made a trend Latin American novels. Published in 1947, it is a story originally intended for adult readers, but has later become a required and important reading material for Filipino students.
+            <br>
+            <h4>Summary</h4>
+            As soon as Don Badoy Montiya comes home to his old home at Intramuros, Manila late at night he finds his grandson chanting an old spell in front of a mirror, memories of his youth came back. He recalled how he fell in love with Agueda, a young woman who resisted his advances. Agueda learned that she would be able to know her future husband by reciting an incantation in front of a mirror. As she recited the words: “Mirror, mirror, show to me him whose woman I will be,” Badoy saw Agueda. Badoy and Agueda got married. Don Badoy told his grandson that every time he looks at the mirror, he only sees a "witch"(Agueda). However, Don Badoy learned from his grandson that he was described by Doña Agueda (through their daughter) as a "devil" when she originally performed the same ritual. Don Badoy ponders on love that had dissipated.[5] The truth was revealed, Badoy and Agueda had a “bitter marriage”, which began in the past, during one evening in the month of May in 1847. The tragedy of the story is Badoy’s heart forgot how he loved Agueda in the past. They were not able to mend their broken marriage because their love was a “raging passion and nothing more”.
+          </p>
+        </div>
+        <div class="cont2">
+          <section id="grid">
+            <h3>Lesson</h3>
+          </section>
+
+          <p>
+            Most people believe that the moral message of May Day Eve is that marriage should only happen because of love. The narrative highlights how love is fundamentally different from lust, and how distinguishing the two requires a certain level of maturity. The author of May Day Eve may be implying that a person needs have met a lot of partners before they can distinguish between love and desire. Alternatively, they may be depicting marriage as a serious matter that must be carefully considered before proceeding, and that communication between a wife and husband is critical to the success of such a relationship.
+          </p>
+        </div>
+      </div>
+      <div id="features" style="display: none">
+        <h2>Features Stories</h2>
+        <section id="border">
+          <div id="sm-border">
+            <img src="godzillakong.jpg" alt="godzillakong" width="70px" height="100px" >
+            <p>The Woman Who Had Two Navels</p>
+          </div>
+          <div id="sm-border">
+            <img src="enola.jpg" alt="enola holmes" width="70px" height="100px" >
+            <p>The Woman Who Had Two Navels and Tales of the Tropical Gothic</p>
+          </div>
+          <div id="sm-border">
+            <img src="stranger.jpg" alt="stranger things" width="70px" height="100px" >
+            <p>A Question of Heroes</p>
+          </div>
+      </div>
+      <div id="contact" style="display: none">
+        <p id="sm-border">
+          Copyright © 2024 Wife. <br>
+          All rights reserved.
+          <br>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </p>
+      </div>
+    </div>
+    <script>
+      function navigate(direction) {
+        var cont1 = document.querySelector(".cont1");
+        var cont2 = document.querySelector(".cont2");
+
+        if (direction === "right") {
+          cont1.style.display = "none";
+          cont2.style.display = "block";
+        } else if (direction === "left") {
+          cont1.style.display = "block";
+          cont2.style.display = "none";
+        }
+      }
+
+      function toggleLatest() {
+        var latest = document.getElementById("latest");
+        var features = document.getElementById("features");
+        var contact = document.getElementById("contact");
+
+        if (latest.style.display === "none") {
+          latest.style.display = "block";
+          features.style.display = "none"; // hide features when showing latest
+          features
+          contact.style.display = "none"; // hide contact when showing features
+        } else {
+          latest.style.display = "none";
+        }
+      }
+
+      function toggleFeatures() {
+        var features = document.getElementById("features");
+        var latest = document.getElementById("latest");
+        var contact = document.getElementById("contact");
+
+        if (features.style.display === "none") {
+          features.style.display = "block";
+          latest.style.display = "none"; // hide latest when showing features
+          contact.style.display = "none"; // hide contact when showing features
+        } else {
+          features.style.display = "none";
+        }
+      }
+
+      function toggleContact() {
+        var features = document.getElementById("features");
+        var latest = document.getElementById("latest");
+        var contact = document.getElementById("contact");
+
+        if (contact.style.display === "none") {
+          contact.style.display = "block";
+          latest.style.display = "none"; // hide latest when showing features
+          features.style.display = "none"; // hide contact when showing features
+        } else {
+          contact.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

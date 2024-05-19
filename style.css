@@ -1,0 +1,160 @@
+nav button {
+  color: white;
+  background: gray;
+  border: none;
+  border-radius: 10px;
+  padding: 2px 15px;
+}
+
+button:hover {
+  background-color: darkslategrey;
+  cursor: pointer;
+}
+
+#content {
+  border: 1px solid darkslategray;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: block;
+  border-radius: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+/* General styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  width: 360px;
+  height: auto;
+  padding: 20px;
+}
+
+/* Additional styles for specific elements */
+#imglogo img {
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+#content nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Additional CSS for the home logo */
+#home-logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+  #container {
+    width: 90%;
+    height: auto;
+  }
+
+  #imglogo img {
+    width: 100%;
+    height: auto;
+  }
+
+  #content {
+    width: 90%;
+  }
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  #container {
+    width: 90%;
+    height: auto;
+  }
+
+  #imglogo img {
+    width: 100%;
+    height: auto;
+  }
+
+  #content {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #container {
+    width: 90%;
+    height: auto;
+  }
+
+  #imglogo img {
+    width: 100%;
+    height: auto;
+  }
+
+  #content {
+    width: 90%;
+  }
+
+  #home-logo {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+#latest {
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  border: 1px solid darkslategray;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.checked {
+  color: orange;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cont2 {
+  display: none; /* Initially hide cont2 */
+}
+
+#border {
+  border: 1px solid darkslategray;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#sm-border {
+  border: 1px solid darkslategray;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
