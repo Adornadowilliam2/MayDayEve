@@ -107,23 +107,30 @@
       </div>
     </div>
     <script>
+       let latest = document.getElementById("latest");
+        let features = document.getElementById("features");
+        let contact = document.getElementById("contact");
       function navigate(direction) {
-        var cont1 = document.querySelector(".cont1");
-        var cont2 = document.querySelector(".cont2");
+        let cont1 = document.querySelector(".cont1");
+        let cont2 = document.querySelector(".cont2");
+        let left = document.querySelector(".fa-arrow-left");
+        let right = document.querySelector(".fa-arrow-right");
 
-        if (direction === "right") {
+        if (direction == "right") {
           cont1.style.display = "none";
           cont2.style.display = "block";
-        } else if (direction === "left") {
+          right.style.color = "gray"
+          left.style.color = "black"
+        } else if (direction == "left") {
           cont1.style.display = "block";
           cont2.style.display = "none";
+          right.style.color = "black"
+          left.style.color = "gray"
         }
       }
 
       function toggleLatest() {
-        var latest = document.getElementById("latest");
-        var features = document.getElementById("features");
-        var contact = document.getElementById("contact");
+       
 
         if (latest.style.display === "none") {
           latest.style.display = "block";
@@ -136,11 +143,9 @@
       }
 
       function toggleFeatures() {
-        var features = document.getElementById("features");
-        var latest = document.getElementById("latest");
-        var contact = document.getElementById("contact");
+ 
 
-        if (features.style.display === "none") {
+        if (features.style.display == "none") {
           features.style.display = "block";
           latest.style.display = "none"; // hide latest when showing features
           contact.style.display = "none"; // hide contact when showing features
@@ -150,11 +155,8 @@
       }
 
       function toggleContact() {
-        var features = document.getElementById("features");
-        var latest = document.getElementById("latest");
-        var contact = document.getElementById("contact");
 
-        if (contact.style.display === "none") {
+        if (contact.style.display == "none") {
           contact.style.display = "block";
           latest.style.display = "none"; // hide latest when showing features
           features.style.display = "none"; // hide contact when showing features
